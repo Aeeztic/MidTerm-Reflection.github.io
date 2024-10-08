@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, black, rgb(144, 96, 6));
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            height: auto; 
+            margin: 0; 
+        }
+        h1 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-right: 500px;  
+        }
+        h2 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;  
+        }
+        .par {
+            border-style: outset;
+            width: 50%;
+            padding: 20px;
+            text-align: left;
+            font-size: 25px;
+            color: white;
+            margin: 0 auto; 
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            width: 250px;
+            height: auto;
+        }
+        .nav {
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img src="image/Cyber-Securit.png" class="logo">
+        <h1 style="color: yellow;">Data Privacy and Cyber Awareness</h1>
+    </div>
+    <h2 style="color: rgb(0, 0, 0); font-size: 40px;">Reflection</h2>
+    <div class="par" id="reflection-container"> 
+        <p id="reflection-text">Loading reflection...</p>
+    </div>
+
+    <py-script>
+        # PyScript to load the reflection content with <br> for line breaks
+        reflection_text = """
+        <span style="color: red; font-weight: bolder; font-style: italic;">Data privacy and Cybercrime awareness</span> have become increasingly crucial as digital transactions and online activities proliferate.
+        Understanding the intricacies of data privacy and the nature of cybercrime is vital for protecting individuals and organizations alike.
+        This summary will explore the salient features of data privacy, the role of the Philippine National Police Anti-Cybercrime Group (PNP-ACG), their functions, punishable acts under cybercrime laws, and the modus operandi of cybercriminals.<br><br>
+        
+        One of the most salient features I’ve learned about data privacy is its role in protecting personal information from unauthorized access and misuse.
+        The Data Privacy Act (DPA) stands out as a crucial legal framework that governs how organizations should handle personal data.
+        This law emphasizes the importance of transparency, lawful processing, and obtaining explicit consent from individuals.
+        It became clear to me that as digital communication expands, the complexity of maintaining data privacy also increases.
+        I have come to appreciate the urgency of implementing robust protective measures to prevent breaches and safeguard personal information.<br><br>
+
+        My exploration of the Philippine National Police Anti-Cybercrime Group (PNP-ACG) was particularly enlightening.
+        Understanding the functions of this specialized unit made me realize the dedication required to combat cybercrime.
+        Their role in preventing, detecting, and investigating offenses like hacking, online scams, and identity theft is crucial.
+        I was impressed by their collaborative efforts with local and international agencies, recognizing that cybercrime knows no borders.
+        Moreover, the public awareness campaigns conducted by the PNP-ACG highlight the importance of educating individuals and businesses about safe online practices.
+        It struck me how essential this education is in empowering people to protect themselves in an ever-evolving digital landscape.<br><br>
+
+        Delving into the legal aspects, I reflected on the Cybercrime Prevention Act of 2012 (Republic Act No. 10175) and the various offenses it covers.
+        The array of punishable acts, from illegal access to computer systems to identity theft and cyber-squatting, revealed the serious nature of cybercrime.
+        I found it reassuring to learn that these laws not only impose penalties but also provide avenues for victims to seek justice.
+        This legal framework enables authorities to respond effectively to cybercrimes, and understanding these laws deepened my appreciation for the ongoing efforts to maintain order in the digital realm.<br><br>
+
+        Lastly, learning about the modus operandi of cybercriminals gave me a stark awareness of the tactics they employ to exploit vulnerabilities in digital systems.
+        From phishing attacks to ransomware and social engineering, the sophistication of these methods underscores the necessity for robust cybersecurity measures.
+        It became evident to me that personal vigilance and public awareness are crucial in preventing victimization.
+        This reflection made me realize that everyone has a role to play in safeguarding their information and that proactive measures are essential.<br><br>
+
+        In conclusion, my journey into the realms of data privacy and cybercrime awareness has been profoundly impactful.
+        Individuals must understand their rights and responsibilities regarding personal data, while organizations like the PNP-ACG are essential in enforcing laws and educating the public.
+        By fostering a culture of awareness and collaboration, we can create a safer online environment where data privacy is respected, and the threat of cybercrime is effectively addressed.
+        This experience has not only informed me but also motivated me to advocate for greater awareness and understanding in my community.
+        """
+
+        # Inject reflection text into the HTML
+        from pyscript import Element
+        Element('reflection-text').element.innerHTML = reflection_text
+    </py-script>
+</body>
+</html>
+
